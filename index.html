@@ -45,6 +45,15 @@
             border-radius: 5px;
             cursor: pointer;
         }
+        .danke-nachricht {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -53,14 +62,10 @@
     </header>
     <div class="container">
         <h2>Über mich</h2>
-        <p>Hey, ich bin Bastian Goldmann, 34 Jahre alt, wohnhaft in Fritzlar (Nordhessen) und aktuell auf der Mission, meinen Traumjob im Personalwesen zu finden. In meiner Freizeit? Sport, Natur und Abenteuer – genauso wie im Beruf liebe ich es, Dinge aktiv anzupacken.</p>
-        <p>Nach meiner Ausbildung zum Verfahrensmechaniker für Kunststoff- und Kautschuktechnik dachte ich: „Yes, das ist es!“ Doch dann kam das Leben mit einem unerwarteten Plot-Twist – eine Krebsdiagnose. Umschulung? Ja, bitte! Ich habe mich für den Industriekaufmann entschieden, weil mich der wirtschaftliche Hintergrund schon immer fasziniert hat. Und siehe da: Während der Umschulung habe ich meine wahre Berufung entdeckt – das Personalwesen!</p>
-        <p>Das letzte halbe Jahr meiner Umschulung war ein wahres Highlight. Ich war im Personalbereich tätig und habe alles mitgenommen: Onboarding-Prozesse begleitet, Vorstellungsgespräche geführt, Arbeitsverträge geschrieben, Stellenanzeigen für diverse Plattformen erstellt und bearbeitet. Ich durfte sogar Mitarbeiterschulungen organisieren und Austrittsprozesse abwickeln. Klingt nach 'ner Menge? War es auch – und ich habe jede Sekunde davon geliebt!</p>
-        <p>Jetzt sitze ich hier, nach unzähligen Bewerbungen, Absagen und Funkstille-Momenten und denke mir: Wieso auf den „richtigen“ Job warten, wenn ich selbst aktiv werden kann? Ich will nicht Däumchen drehen und auf den nächsten Jobcenter-Termin warten – ich nehme meine Zukunft selbst in die Hand! Und genau deshalb gibt es diese Website: Damit genau SIE, liebe Arbeitgeber, mich entdecken, bevor ich mich zum König der Bewerbungsschreiben entwickle. 😉</p>
+        <p>Hey, ich bin Bastian Goldmann, 34 Jahre alt, wohnhaft in Fritzlar (Nordhessen) und aktuell auf der Mission, meinen Traumjob im Personalwesen zu finden...</p>
         
         <h2>Lebenslauf</h2>
         <p>Hier können Sie meinen Lebenslauf als PDF herunterladen:</p>
-        <p>Falls Sie noch Fragen haben oder sich denken: „Den Bastian muss ich unbedingt kennenlernen!“, dann zögern Sie nicht, mir eine Nachricht zu schicken. Ich bin nur eine E-Mail entfernt! 😉</p>
         <a href="W_Lebenslauf.pdf" download>Lebenslauf herunterladen</a>
         
         <h2>Kontakt</h2>
@@ -77,6 +82,23 @@
             
             <button type="submit">Senden</button>
         </form>
+        <div class="danke-nachricht">Danke für Ihre Nachricht! Ich melde mich so schnell wie möglich. 😊</div>
     </div>
+
+    <script>
+        document.querySelector(".kontakt-formular").addEventListener("submit", function(event) {
+            event.preventDefault(); // Verhindert das Neuladen der Seite
+            const form = this;
+            fetch(form.action, {
+                method: form.method,
+                body: new FormData(form)
+            }).then(response => {
+                if (response.ok) {
+                    form.style.display = "none";
+                    document.querySelector(".danke-nachricht").style.display = "block";
+                }
+            }).catch(error => console.error("Fehler:", error));
+        });
+    </script>
 </body>
 </html>
