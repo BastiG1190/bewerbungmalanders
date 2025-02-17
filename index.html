@@ -212,19 +212,19 @@
         <!-- Kontakt -->
         <div class="abschnitt">
             <h2>Kontakt</h2>
-            <form id="kontakt-formular" class="kontakt-formular">
-                <input type="hidden" name="_captcha" value="false">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">E-Mail:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="nachricht">Nachricht:</label>
-                <textarea id="nachricht" name="message" rows="4" required></textarea>
-                
-                <button type="submit">Senden</button>
-            </form>
+            <form name="kontakt" method="POST" data-netlify="true">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    
+    <label for="email">E-Mail:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="nachricht">Nachricht:</label>
+    <textarea id="nachricht" name="message" rows="4" required></textarea>
+    
+    <button type="submit">Senden</button>
+</form>
+
             <div class="ladeanimation"></div>
             <div class="danke-nachricht">Danke für Ihre Nachricht! Ich melde mich so schnell wie möglich. 😊</div>
         </div>
