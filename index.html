@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bastian Goldmann - Bewerbung</title>
+    <style>
+        /* Allgemeine Stile */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e5ece7;
+            color: #333;
+        }
+
+        header {
+            background-color: #1b4d3e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #1b4d3e;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Kontaktformular */
+        .kontakt-formular {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .kontakt-formular label {
+            font-weight: bold;
+        }
+
+        .kontakt-formular input,
+        .kontakt-formular textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .kontakt-formular textarea {
+            height: 100px;
+        }
+
+        .kontakt-formular button {
+            background-color: #1b4d3e;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .kontakt-formular button:hover {
+            background-color: #14392a;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Ich habe alle Bewerbungen durchgespielt – jetzt probiere ich's mit einer eigenen Website! 😎
+    </header>
+
+    <div class="container">
+        <h2>Über mich</h2>
+        <p>Hey, ich bin <strong>Bastian Goldmann</strong>, 34 Jahre alt und auf der Mission, meinen Traumjob im Personalwesen zu finden.</p>
+        <p>Nach meiner Umschulung zum Industriekaufmann habe ich meine Leidenschaft für das Personalwesen entdeckt. Nun suche ich eine neue Herausforderung, bei der ich meine Fähigkeiten einbringen kann.</p>
+    </div>
+
+    <div class="container">
+        <h2>Lebenslauf</h2>
+        <p>Hier können Sie meinen Lebenslauf als PDF herunterladen:</p>
+        <a href="W_Lebenslauf.pdf" download>Lebenslauf herunterladen</a>
+    </div>
+
+    <div class="container">
+        <h2>Kontakt</h2>
+        <form id="kontakt-formular" class="kontakt-formular">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">E-Mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="nachricht">Nachricht:</label>
+            <textarea id="nachricht" name="message" required></textarea>
+
+            <button type="submit">Senden</button>
+        </form>
+    </div>
+</body>
+</html>
