@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bastian Goldmann - Bewerbung</title>
+    <style>
+        /* Allgemeine Stile */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #e5ece7, #d1e0d8);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: rgba(27, 77, 62, 0.9); /* Glas-Effekt */
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            font-size: 28px;
+            backdrop-filter: blur(10px); /* Glas-Effekt */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.9); /* Glas-Effekt */
+            border-radius: 15px;
+            backdrop-filter: blur(10px); /* Glas-Effekt */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #1b4d3e;
+            margin-top: 0;
+            font-size: 26px;
+            border-bottom: 2px solid #1b4d3e;
+            padding-bottom: 10px;
+        }
+
+        p {
+            margin: 20px 0;
+            font-size: 16px;
+        }
+
+        a {
+            color: #1b4d3e;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #14392a;
+            text-decoration: underline;
+        }
+
+        /* Button-Stile */
+        .lebenslauf-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 25px;
+            background-color: #1b4d3e;
+            color: white;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .lebenslauf-button:hover {
+            background-color: #14392a;
+            transform: translateY(-2px); /* Mikro-Interaktion */
+        }
+
+        /* Kontaktformular */
+        .kontakt-formular input, .kontakt-formular textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.8); /* Glas-Effekt */
+            transition: border-color 0.3s ease;
+        }
+
+        .kontakt-formular input:focus, .kontakt-formular textarea:focus {
+            border-color: #1b4d3e;
+            outline: none;
+        }
+
+        .kontakt-formular button {
+            background-color: #1b4d3e;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .kontakt-formular button:hover {
+            background-color: #14392a;
+            transform: translateY(-2px); /* Mikro-Interaktion */
+        }
+
+        /* Dankes-Nachricht */
+        .danke-nachricht {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        /* Highlight-Stile */
+        .highlight {
+            color: #1b4d3e;
+            font-weight: bold;
+        }
+
+        /* Zitat-Stil */
+        .zitat {
+            font-style: italic;
+            color: #555;
+            margin: 20px 0;
+            padding-left: 20px;
+            border-left: 4px solid #1b4d3e;
+        }
+
+        /* Abschnittsabstand */
+        .abschnitt {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Ich habe alle Bewerbungen durchgespielt – jetzt probiere ich's mit einer eigenen Website! 😎
+    </header>
+    <div class="container">
+        <!-- Über mich -->
+        <div class="abschnitt">
+            <h2>Über mich</h2>
+            <p>Hey, ich bin <span class="highlight">Bastian Goldmann</span>, 34 Jahre alt, wohnhaft in Fritzlar (Nordhessen) und aktuell auf der Mission, meinen Traumjob im Personalwesen zu finden. In meiner Freizeit? Sport, Natur und Abenteuer – genauso wie im Beruf liebe ich es, Dinge aktiv anzupacken.</p>
+            <p>Nach meiner Ausbildung zum Verfahrensmechaniker für Kunststoff- und Kautschuktechnik dachte ich: „Yes, das ist es!“ Doch dann kam das Leben mit einem unerwarteten Plot-Twist – eine Krebsdiagnose. Umschulung? Ja, bitte! Ich habe mich für den Industriekaufmann entschieden, weil mich der wirtschaftliche Hintergrund schon immer fasziniert hat. Und siehe da: Während der Umschulung habe ich meine wahre Berufung entdeckt – das Personalwesen!</p>
+            <p class="zitat">„Manchmal sind es die unerwarteten Wendungen im Leben, die uns zu unserem wahren Weg führen.“</p>
+            <p>Das letzte halbe Jahr meiner Umschulung war ein wahres Highlight. Ich war im Personalbereich tätig und habe alles mitgenommen: Onboarding-Prozesse begleitet, Vorstellungsgespräche geführt, Arbeitsverträge geschrieben, Stellenanzeigen für diverse Plattformen erstellt und bearbeitet. Ich durfte sogar Mitarbeiterschulungen organisieren und Austrittsprozesse abwickeln. Klingt nach 'ner Menge? War es auch – und ich habe jede Sekunde davon geliebt!</p>
+            <p>Heute bin ich bereit, meine Leidenschaft für das Personalwesen in die Tat umzusetzen. Ich suche ein Team, das mich dabei unterstützt, meine Fähigkeiten weiter auszubauen und gemeinsam großartige Dinge zu erreichen.</p>
+        </div>
+
+        <!-- Lebenslauf -->
+        <div class="abschnitt">
+            <h2>Lebenslauf</h2>
+            <p>Hier können Sie meinen Lebenslauf als PDF herunterladen:</p>
+            <a href="W_Lebenslauf.pdf" download class="lebenslauf-button">Lebenslauf herunterladen</a>
+        </div>
+
+        <!-- Kontakt -->
+        <div class="abschnitt">
+            <h2>Kontakt</h2>
+            <form id="kontakt-formular" class="kontakt-formular">
+                <input type="hidden" name="_captcha" value="false">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">E-Mail:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="nachricht">Nachricht:</label>
+                <textarea id="nachricht" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Senden</button>
+            </form>
+            <div class="danke-nachricht">Danke für Ihre Nachricht! Ich melde mich so schnell wie möglich. 😊</div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("kontakt-formular").addEventListener("submit", function(event) {
+            event.preventDefault(); // Verhindert das Neuladen der Seite
+            const form = this;
+            const formData = new FormData(form);
+            
+            fetch("https://formsubmit.co/ajax/bastiangoldmann@gmail.com", {
+                method: "POST",
+                headers: { "Accept": "application/json" },
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    form.style.display = "none";
+                    document.querySelector(".danke-nachricht").style.display = "block";
+                }
+            })
+            .catch(error => console.error("Fehler:", error));
+        });
+    </script>
+</body>
+</html>
