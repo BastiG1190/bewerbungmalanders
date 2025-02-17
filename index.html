@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bastian Goldmann - Bewerbung</title>
+    <style>
+        /* Allgemeine Stile */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #e5ece7, #d1e0d8);
+            color: #333; /* Textfarbe */
+            line-height: 1.6;
+        }
+
+        header {
+            background: rgba(27, 77, 62, 0.9);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            font-size: 32px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: #1b4d3e;
+            font-size: 28px;
+            border-bottom: 2px solid #1b4d3e;
+            padding-bottom: 10px;
+        }
+
+        /* Kontaktformular */
+        .kontakt-formular {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .kontakt-formular label {
+            font-weight: bold;
+            color: #333; /* Textfarbe der Labels */
+        }
+
+        .kontakt-formular input,
+        .kontakt-formular textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.9);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .kontakt-formular textarea {
+            height: 120px;
+        }
+
+        .kontakt-formular input:focus,
+        .kontakt-formular textarea:focus {
+            border-color: #1b4d3e;
+            box-shadow: 0 0 8px rgba(27, 77, 62, 0.3);
+            outline: none;
+        }
+
+        .kontakt-formular button {
+            width: 100%;
+            background-color: #1b4d3e;
+            color: white; /* Textfarbe des Buttons */
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .kontakt-formular button:hover {
+            background-color: #14392a;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Ich habe alle Bewerbungen durchgespielt – jetzt probiere ich's mit einer eigenen Website! 😎
+    </header>
+    <div class="container">
+        <h2>Kontakt</h2>
+        <form id="kontakt-formular" class="kontakt-formular">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">E-Mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="nachricht">Nachricht:</label>
+            <textarea id="nachricht" name="message" required></textarea>
+
+            <button type="submit">Senden</button>
+        </form>
+    </div>
+</body>
+</html>
