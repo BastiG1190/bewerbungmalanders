@@ -19,8 +19,8 @@
             background: rgba(27, 77, 62, 0.9);
             color: white;
             text-align: center;
-            padding: 60px 20px;
-            font-size: 32px;
+            padding: 40px 20px;
+            font-size: 28px;
             backdrop-filter: blur(10px);
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
@@ -38,14 +38,28 @@
 
         h2 {
             color: #1b4d3e;
-            font-size: 28px;
+            font-size: 24px;
             border-bottom: 2px solid #1b4d3e;
-            padding-bottom: 10px;
+            padding-bottom: 8px;
         }
 
         p {
             font-size: 16px;
             margin-bottom: 15px;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #1b4d3e;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        a:hover {
+            background-color: #14392a;
         }
 
         /* Kontaktformular */
@@ -61,7 +75,7 @@
 
         .kontakt-formular input,
         .kontakt-formular textarea {
-            width: 100%; /* Alle Felder gleich breit */
+            width: 100%;
             padding: 12px;
             border: 1px solid #ccc;
             border-radius: 8px;
@@ -71,7 +85,7 @@
         }
 
         .kontakt-formular textarea {
-            height: 120px; /* Höhe des Textfelds */
+            height: 120px;
         }
 
         .kontakt-formular input:focus,
@@ -82,7 +96,6 @@
         }
 
         .kontakt-formular button {
-            width: 100%;
             background-color: #1b4d3e;
             color: white;
             padding: 12px;
@@ -106,12 +119,14 @@
 
     <div class="container">
         <h2>Über mich</h2>
-        <p>Hey, ich bin <strong>Bastian Goldmann</strong>, 34 Jahre alt und auf der Mission, meinen Traumjob im Personalwesen zu finden. Meine Stärken liegen in der Kommunikation, Organisation und im Recruiting.</p>
+        <p>Hey, ich bin <strong>Bastian Goldmann</strong>, 34 Jahre alt und auf der Mission, meinen Traumjob im Personalwesen zu finden.</p>
         <p>Nach meiner Umschulung zum Industriekaufmann habe ich meine Leidenschaft für das Personalwesen entdeckt. Nun suche ich eine neue Herausforderung, bei der ich meine Fähigkeiten einbringen kann.</p>
+    </div>
 
+    <div class="container">
         <h2>Lebenslauf</h2>
         <p>Hier können Sie meinen Lebenslauf als PDF herunterladen:</p>
-        <a href="W_Lebenslauf.pdf" download class="lebenslauf-button">Lebenslauf herunterladen</a>
+        <a href="W_Lebenslauf.pdf" download>Lebenslauf herunterladen</a>
     </div>
 
     <div class="container">
