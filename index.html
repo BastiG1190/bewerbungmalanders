@@ -56,7 +56,7 @@
 
         .kontakt-formular input,
         .kontakt-formular textarea {
-            width: 70%; /* Name und E-Mail schmaler */
+            width: 100%; /* Alle Felder gleich breit */
             padding: 12px;
             border: 1px solid #ccc;
             border-radius: 8px;
@@ -66,18 +66,18 @@
         }
 
         .kontakt-formular textarea {
-            width: 100%; /* Das Textfeld bleibt breit */
-            height: 120px;
+            height: 120px; /* Höhe des Textfelds */
         }
 
-        .kontakt-formular input:focus, .kontakt-formular textarea:focus {
+        .kontakt-formular input:focus,
+        .kontakt-formular textarea:focus {
             border-color: #1b4d3e;
             box-shadow: 0 0 8px rgba(27, 77, 62, 0.3);
             outline: none;
         }
 
         .kontakt-formular button {
-            width: 50%;
+            width: 100%; /* Button breiter */
             background-color: #1b4d3e;
             color: white;
             padding: 12px;
@@ -101,6 +101,7 @@
     <div class="container">
         <h2>Kontakt</h2>
         <form name="kontakt" method="POST" data-netlify="true" class="kontakt-formular">
+            <input type="hidden" name="form-name" value="kontakt">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
