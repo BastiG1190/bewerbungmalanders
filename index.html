@@ -11,12 +11,12 @@
             margin: 0;
             padding: 0;
             background: linear-gradient(135deg, #e5ece7, #d1e0d8);
-            color: #333; /* Textfarbe */
+            color: #333;
             line-height: 1.6;
         }
 
         header {
-            background: rgba(27, 77, 62, 0.9);
+            background: rgba(27, 77, 62, 0.9); /* Glas-Effekt */
             color: white;
             text-align: center;
             padding: 60px 20px;
@@ -34,31 +34,62 @@
             border-radius: 15px;
             backdrop-filter: blur(10px);
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
         }
 
         h2 {
             color: #1b4d3e;
+            margin-top: 0;
             font-size: 28px;
             border-bottom: 2px solid #1b4d3e;
             padding-bottom: 10px;
         }
 
-        /* Kontaktformular */
-        .kontakt-formular {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
+        p {
+            margin: 20px 0;
+            font-size: 16px;
         }
 
-        .kontakt-formular label {
+        a {
+            color: #1b4d3e;
+            text-decoration: none;
             font-weight: bold;
-            color: #333; /* Textfarbe der Labels */
+            transition: color 0.3s ease;
         }
 
-        .kontakt-formular input,
-        .kontakt-formular textarea {
+        a:hover {
+            color: #14392a;
+            text-decoration: underline;
+        }
+
+        /* Button-Stile */
+        .lebenslauf-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 25px;
+            background-color: #1b4d3e;
+            color: white;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .lebenslauf-button:hover {
+            background-color: #14392a;
+            transform: translateY(-2px);
+        }
+
+        /* Kontaktformular */
+        .kontakt-formular input, .kontakt-formular textarea {
             width: 100%;
             padding: 12px;
+            margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 8px;
             font-size: 16px;
@@ -66,22 +97,16 @@
             transition: border-color 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .kontakt-formular textarea {
-            height: 120px;
-        }
-
-        .kontakt-formular input:focus,
-        .kontakt-formular textarea:focus {
+        .kontakt-formular input:focus, .kontakt-formular textarea:focus {
             border-color: #1b4d3e;
             box-shadow: 0 0 8px rgba(27, 77, 62, 0.3);
             outline: none;
         }
 
         .kontakt-formular button {
-            width: 100%;
             background-color: #1b4d3e;
-            color: white; /* Textfarbe des Buttons */
-            padding: 12px;
+            color: white;
+            padding: 12px 25px;
             border: none;
             border-radius: 8px;
             cursor: pointer;
@@ -93,6 +118,73 @@
             background-color: #14392a;
             transform: translateY(-2px);
         }
+
+        /* Dankes-Nachricht */
+        .danke-nachricht {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 16px;
+            animation: fadeIn 0.5s ease;
+        }
+
+        /* Ladeanimation */
+        .ladeanimation {
+            display: none;
+            margin: 20px auto;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #1b4d3e;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Graufärbung des Formulars */
+        .formular-gesendet {
+            opacity: 0.5;
+            pointer-events: none; /* Deaktiviert Interaktionen */
+        }
+
+        /* Zitat-Stil */
+        .zitat {
+            font-style: italic;
+            color: #555;
+            margin: 20px 0;
+            padding-left: 20px;
+            border-left: 4px solid #1b4d3e;
+        }
+
+        /* Abschnittsabstand */
+        .abschnitt {
+            margin-bottom: 40px;
+        }
+
+        /* Hover-Effekt für Links */
+        .highlight {
+            color: #1b4d3e;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .highlight:hover {
+            color: #14392a;
+        }
     </style>
 </head>
 <body>
@@ -100,19 +192,76 @@
         Ich habe alle Bewerbungen durchgespielt – jetzt probiere ich's mit einer eigenen Website! 😎
     </header>
     <div class="container">
-        <h2>Kontakt</h2>
-        <form id="kontakt-formular" class="kontakt-formular">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+        <!-- Über mich -->
+        <div class="abschnitt">
+            <h2>Über mich</h2>
+            <p>Hey, ich bin <span class="highlight">Bastian Goldmann</span>, 34 Jahre alt, wohnhaft in Fritzlar (Nordhessen) und aktuell auf der Mission, meinen Traumjob im Personalwesen zu finden. Ich bin ein aufgeschlossener und tatkräftiger Mensch, der es liebt, mit Menschen zu arbeiten und Strukturen zu verbessern. Mein Weg hierhin war nicht immer geradlinig – aber genau das hat mich geprägt.</p>
+            <p>Ursprünglich habe ich eine Ausbildung zum Verfahrensmechaniker für Kunststoff- und Kautschuktechnik gemacht. Ich dachte, das wäre mein Weg. Doch das Leben hatte andere Pläne – eine schwere Erkrankung führte dazu, dass ich meine Karriere neu ausrichten musste. Ich entschied mich für eine Umschulung zum Industriekaufmann, wodurch ich mein wirtschaftliches Wissen vertiefen konnte.</p>
+            <p class="zitat">„Manchmal sind es die unerwarteten Wendungen im Leben, die uns zu unserem wahren Weg führen.“</p>
+            <p>Während der Umschulung entdeckte ich meine wahre Leidenschaft: das Personalwesen. Ich durfte in den verschiedensten HR-Bereichen mitarbeiten – von Onboarding und Recruiting über Vertragswesen bis hin zur Mitarbeiterbetreuung und Schulungsorganisation. Jede dieser Aufgaben hat mir gezeigt, dass es genau das ist, was ich machen möchte: Menschen unterstützen, Prozesse optimieren und ein Unternehmen durch gezielte Personalmaßnahmen nach vorne bringen.</p>
+            <p>Nun suche ich nach einer spannenden beruflichen Herausforderung, in der ich meine Stärken und meine Leidenschaft für das Personalwesen voll einbringen kann. Ich freue mich auf die Möglichkeit, mein Wissen weiter auszubauen und gemeinsam mit einem Team neue Erfolge zu feiern.</p>
+        </div>
 
-            <label for="email">E-Mail:</label>
-            <input type="email" id="email" name="email" required>
+        <!-- Lebenslauf -->
+        <div class="abschnitt">
+            <h2>Lebenslauf</h2>
+            <p>Hier können Sie meinen Lebenslauf als PDF herunterladen:</p>
+            <a href="W_Lebenslauf.pdf" download class="lebenslauf-button">Lebenslauf herunterladen</a>
+        </div>
 
-            <label for="nachricht">Nachricht:</label>
-            <textarea id="nachricht" name="message" required></textarea>
-
-            <button type="submit">Senden</button>
-        </form>
+        <!-- Kontakt -->
+        <div class="abschnitt">
+            <h2>Kontakt</h2>
+            <form id="kontakt-formular" class="kontakt-formular">
+                <input type="hidden" name="_captcha" value="false">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">E-Mail:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="nachricht">Nachricht:</label>
+                <textarea id="nachricht" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Senden</button>
+            </form>
+            <div class="ladeanimation"></div>
+            <div class="danke-nachricht">Danke für Ihre Nachricht! Ich melde mich so schnell wie möglich. 😊</div>
+        </div>
     </div>
+
+    <script>
+        document.getElementById("kontakt-formular").addEventListener("submit", function(event) {
+            event.preventDefault(); // Verhindert das Neuladen der Seite
+            const form = this;
+            const ladeanimation = document.querySelector(".ladeanimation");
+            const dankeNachricht = document.querySelector(".danke-nachricht");
+
+            // Ladeanimation anzeigen
+            ladeanimation.style.display = "block";
+            form.classList.add("formular-gesendet");
+
+            const formData = new FormData(form);
+            
+            fetch("https://formsubmit.co/ajax/bastiangoldmann@gmail.com", {
+                method: "POST",
+                headers: { "Accept": "application/json" },
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Ladeanimation ausblenden, Formular ausgrauen und Dankes-Nachricht anzeigen
+                    ladeanimation.style.display = "none";
+                    dankeNachricht.style.display = "block";
+                }
+            })
+            .catch(error => {
+                console.error("Fehler:", error);
+                ladeanimation.style.display = "none";
+                form.classList.remove("formular-gesendet");
+            });
+        });
+    </script>
 </body>
 </html>
