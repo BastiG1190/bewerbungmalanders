@@ -3,255 +3,527 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Basti – Industriekaufmann</title>
-  <meta name="description" content="Basti – Industriekaufmann mit Erfahrung im Einkauf, Materialwirtschaft und Personalwesen. Strukturiert, ruhig und praxisnah." />
+
+  <meta name="description" content="Industriekaufmann mit technischem Hintergrund und Erfahrung in produktionsnahen kaufmännischen Abläufen." />
   <meta property="og:title" content="Basti – Industriekaufmann" />
-  <meta property="og:description" content="Industriekaufmann mit technischem Hintergrund und Erfahrung im Einkauf, Materialfluss und Personalwesen." />
+  <meta property="og:description" content="Praxis im Kopf. Struktur im Blick. Chaos bitte nur in Maßen." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="de_DE" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --bg:#dbefe1;
-      --text:#006d6f;
-      --card:#ffffff;
-      --border:#c5e0d7;
-      --acc:#008080;
+    :root{
+      --paper:#efe7d8;
+      --ink:#2f3934;
+      --muted:#6d675f;
+      --line:#9a8668;
+      --stone-light:#e7dcc9;
+      --stone:#cdbd9f;
+      --stone-dark:#8b7458;
+      --accent:#5f7774;
     }
 
-    * {
+    *{
       box-sizing:border-box;
     }
 
-    html,body {
-      margin:0;
-      padding:0;
-      background:var(--bg);
-      color:var(--text);
-      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;
+    html{
+      scroll-behavior:smooth;
     }
 
-    a {
-      color:var(--acc);
+    body{
+      margin:0;
+      color:var(--ink);
+      font-family:Inter,system-ui,sans-serif;
+      background:
+        radial-gradient(circle at 18% 22%, rgba(255,255,255,.38), transparent 26%),
+        radial-gradient(circle at 82% 12%, rgba(255,255,255,.28), transparent 28%),
+        radial-gradient(circle at 50% 80%, rgba(150,120,80,.12), transparent 36%),
+        linear-gradient(135deg, #f4eddd, #e7dcc8 55%, #d8c8ac);
+      background-attachment:fixed;
+    }
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      opacity:.22;
+      background-image:
+        repeating-radial-gradient(circle at 0 0, rgba(80,65,45,.16) 0 1px, transparent 1px 5px),
+        repeating-linear-gradient(35deg, rgba(95,75,50,.06) 0 1px, transparent 1px 12px);
+      mix-blend-mode:multiply;
+    }
+
+    .wrap{
+      max-width:1180px;
+      margin:0 auto;
+      padding:26px 22px 40px;
+      position:relative;
+      z-index:1;
+    }
+
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:24px;
+      border-bottom:1px solid rgba(95,75,50,.35);
+      padding-bottom:18px;
+    }
+
+    .brand{
+      font-family:"Special Elite", monospace;
+      letter-spacing:1px;
+    }
+
+    .brand strong{
+      display:block;
+      font-size:38px;
+      line-height:1;
+    }
+
+    .brand span{
+      display:block;
+      margin-top:5px;
+      font-size:15px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    nav{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+      gap:14px;
+      font-size:13px;
+      text-transform:uppercase;
+      letter-spacing:.04em;
+      padding-top:8px;
+    }
+
+    nav a{
+      color:var(--ink);
       text-decoration:none;
     }
 
-    a:hover {
+    nav a:hover{
       text-decoration:underline;
     }
 
-    .wrap {
-      max-width:1100px;
-      margin:0 auto;
-      padding:24px;
-    }
-
-    h1,h2,h3 {
-      color:var(--text);
-    }
-
-    header {
-      padding:48px 0;
-    }
-
-    .hero {
-      display:grid;
-      gap:24px;
-    }
-
-    .hero h1 {
-      font-family:"Dancing Script",cursive;
-      font-size:42px;
+    .hero{
       text-align:center;
-      margin-bottom:8px;
+      padding:46px 0 30px;
     }
 
-    .lead {
-      font-size:16px;
-      line-height:1.8;
-      max-width:850px;
-      margin:0 auto;
+    h1{
+      font-family:"Special Elite", monospace;
+      font-weight:400;
+      font-size:clamp(38px, 7vw, 72px);
+      line-height:1.05;
+      margin:0;
+      letter-spacing:1px;
     }
 
-    section {
-      margin:48px 0;
+    .hero .script{
+      display:block;
+      margin-top:10px;
+      font-family:"Special Elite", monospace;
+      font-size:clamp(24px, 4vw, 42px);
+      color:#3e4741;
+      transform:rotate(-1deg);
     }
 
-    h2 {
-      font-size:22px;
-      margin:0 0 16px;
+    .subline{
+      max-width:690px;
+      margin:24px auto 0;
+      font-size:17px;
+      line-height:1.65;
+    }
+
+    .subline strong{
+      font-weight:700;
+    }
+
+    .stone-stage{
+      position:relative;
+      margin:34px auto 0;
+      max-width:920px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .stone-slab{
+      position:relative;
+      z-index:2;
+      width:100%;
+      padding:52px 64px;
       text-align:center;
+      background:
+        radial-gradient(circle at 18% 18%, rgba(255,255,255,.32), transparent 20%),
+        radial-gradient(circle at 75% 70%, rgba(90,65,35,.16), transparent 28%),
+        radial-gradient(circle at 35% 85%, rgba(70,50,30,.10), transparent 22%),
+        linear-gradient(145deg, #e2d5bf, #cdbb9d 55%, #bfae91);
+      border:2px solid #9a8668;
+      box-shadow:
+        inset 0 0 50px rgba(80,60,38,.28),
+        inset 0 0 8px rgba(255,255,255,.35),
+        0 18px 34px rgba(70,52,32,.22);
+      border-radius:18px 26px 20px 24px;
+      clip-path:polygon(2% 3%, 98% 0, 97% 96%, 4% 100%, 0 45%);
     }
 
-    .grid {
+    .stone-slab::before{
+      content:"";
+      position:absolute;
+      inset:12px;
+      border:1px solid rgba(85,68,48,.28);
+      border-radius:14px;
+      pointer-events:none;
+      z-index:1;
+    }
+
+    .stone-slab::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      opacity:.22;
+      background-image:
+        repeating-radial-gradient(circle at 20% 30%, rgba(65,45,25,.22) 0 1px, transparent 1px 7px),
+        repeating-linear-gradient(12deg, rgba(80,58,34,.10) 0 1px, transparent 1px 18px);
+      mix-blend-mode:multiply;
+      z-index:0;
+    }
+
+    .stone-content{
+      position:relative;
+      z-index:2;
+    }
+
+    .stone-slab h2{
+      font-family:"Special Elite", monospace;
+      font-size:34px;
+      margin:0 0 26px;
+      letter-spacing:1px;
+      text-transform:uppercase;
+    }
+
+    .stone-slab h2::after{
+      content:"";
+      display:block;
+      width:90px;
+      height:2px;
+      background:rgba(75,58,38,.55);
+      margin:14px auto 0;
+    }
+
+    .stone-slab p{
+      margin:0 0 18px;
+      line-height:1.65;
+      font-size:15px;
+    }
+
+    .stone-slab p:last-child{
+      margin-bottom:0;
+    }
+
+    .info-grid{
       display:grid;
-      gap:16px;
+      grid-template-columns:repeat(4, 1fr);
+      border:2px solid #9a8668;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,.25), transparent 20%),
+        linear-gradient(145deg, #e7dcc9, #cdbd9f);
+      box-shadow:
+        inset 0 0 35px rgba(80,60,38,.16),
+        0 12px 26px rgba(80,60,40,.16);
+      margin-top:26px;
+      border-radius:16px;
+      overflow:hidden;
     }
 
-    @media (min-width:840px) {
-      .grid.cols-2 {
-        grid-template-columns:repeat(2,1fr);
+    .info-card{
+      padding:28px 24px;
+      border-right:1px solid rgba(95,75,50,.35);
+      min-height:300px;
+      background:
+        radial-gradient(circle at 80% 20%, rgba(255,255,255,.18), transparent 22%),
+        linear-gradient(180deg, rgba(255,255,255,.12), rgba(120,90,55,.06));
+    }
+
+    .info-card:last-child{
+      border-right:0;
+    }
+
+    .icon{
+      font-size:34px;
+      opacity:.72;
+      margin-bottom:12px;
+      filter:grayscale(1);
+    }
+
+    .info-card h3{
+      font-family:"Special Elite", monospace;
+      font-size:20px;
+      line-height:1.2;
+      margin:0 0 18px;
+      text-transform:uppercase;
+    }
+
+    ul{
+      margin:0;
+      padding-left:20px;
+    }
+
+    li{
+      margin:0 0 12px;
+      line-height:1.45;
+      font-size:14px;
+    }
+
+    .contact{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:14px;
+      align-items:center;
+      margin:34px auto 0;
+      padding-top:24px;
+      border-top:1px solid rgba(95,75,50,.35);
+      max-width:920px;
+      text-align:center;
+      color:#383832;
+    }
+
+    .contact a{
+      color:var(--ink);
+      text-decoration:none;
+      font-weight:600;
+    }
+
+    .contact a:hover{
+      text-decoration:underline;
+    }
+
+    footer{
+      text-align:center;
+      margin-top:28px;
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    @media(max-width:980px){
+      .stone-slab{
+        width:100%;
+        max-width:850px;
+      }
+
+      .info-grid{
+        grid-template-columns:repeat(2, 1fr);
+      }
+
+      .info-card:nth-child(2){
+        border-right:0;
+      }
+
+      .info-card:nth-child(1),
+      .info-card:nth-child(2){
+        border-bottom:1px solid rgba(95,75,50,.35);
       }
     }
 
-    .card {
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius:16px;
-      padding:20px;
-    }
+    @media(max-width:680px){
+      .wrap{
+        padding:22px 14px 32px;
+      }
 
-    .card h3 {
-      margin-top:0;
-      font-size:18px;
-    }
+      header{
+        display:block;
+        text-align:center;
+      }
 
-    ul {
-      margin:10px 0 0 18px;
-      padding:0;
-    }
+      nav{
+        justify-content:center;
+        margin-top:20px;
+      }
 
-    li {
-      margin:8px 0;
-      line-height:1.5;
-    }
+      .brand strong{
+        font-size:34px;
+      }
 
-    footer {
-      border-top:1px solid var(--border);
-      margin-top:48px;
-      padding:24px 0;
-      font-size:14px;
-      text-align:center;
-    }
+      .stone-slab{
+        padding:34px 24px;
+        clip-path:none;
+      }
 
-    form {
-      display:grid;
-      gap:12px;
-      max-width:500px;
-      margin:0 auto;
-    }
+      .stone-slab h2{
+        font-size:28px;
+      }
 
-    input,
-    textarea {
-      background:#fff;
-      border:1px solid var(--border);
-      border-radius:10px;
-      padding:10px 14px;
-      font-family:inherit;
-      color:var(--text);
-    }
+      .info-grid{
+        grid-template-columns:1fr;
+      }
 
-    button[type="submit"] {
-      background:var(--acc);
-      color:#fff;
-      border:0;
-      border-radius:10px;
-      padding:10px 14px;
-      font-weight:600;
-      cursor:pointer;
-    }
+      .info-card{
+        border-right:0;
+        border-bottom:1px solid rgba(95,75,50,.35);
+      }
 
-    button[type="submit"]:hover {
-      opacity:0.9;
+      .info-card:last-child{
+        border-bottom:0;
+      }
+
+      .contact{
+        grid-template-columns:1fr;
+      }
     }
   </style>
 </head>
 
 <body>
+
   <div class="wrap">
 
-    <header class="hero">
-      <h1>Hey, ich bin Basti...</h1>
+    <header>
+      <div class="brand">
+        <strong>BASTI</strong>
+        <span>Industriekaufmann</span>
+      </div>
 
-      <p class="lead">
-
-        <br><br>
-
-        Ich bin Basti – Industriekaufmann mit technischer Vergangenheit und einem klaren Blick für praktische Abläufe. Mein beruflicher Weg war nicht geradlinig, aber genau dadurch habe ich gelernt, mich neu auszurichten, Verantwortung zu übernehmen und Dinge realistisch anzupacken.
-
-        <br><br>
-
-        Ursprünglich komme ich aus der Produktion. Als gelernter Verfahrensmechaniker weiß ich, was es bedeutet, wenn Material fehlt, Termine drücken oder Abläufe nicht sauber ineinandergreifen. Diese Erfahrung prägt bis heute meine Arbeitsweise: Ich denke nicht nur vom Schreibtisch aus, sondern habe immer auch den praktischen Bezug zum Produkt, zur Fertigung und zu den Menschen dahinter im Blick.
-
-        <br><br>
-
-        Während meiner Umschulung zum Industriekaufmann habe ich besonders im <strong>Einkauf</strong> gemerkt, wo meine Stärken liegen: freigegebene Bedarfe in Bestellungen umsetzen, Angebote einholen, Lieferanten- und Artikeldaten pflegen, Liefertermine nachhalten und eng mit Projektleitern sowie technischen Ansprechpartnern abstimmen. Mir liegt diese Schnittstelle zwischen Büro, Materialfluss und Produktion, weil dort Struktur, Verlässlichkeit und praktisches Verständnis zusammenkommen.
-
-        <br><br>
-
-        Ergänzend habe ich im <strong>Personalwesen</strong> praktische Einblicke gesammelt – vor allem in Bewerberkommunikation, Interviewkoordination und Onboarding. Besonders der Umgang mit neuen Mitarbeitenden und Auszubildenden liegt mir, weil ich gern Orientierung gebe, Abläufe erkläre und Menschen ruhig und auf Augenhöhe begleite.
-
-        <br><br>
-
-        Ich bin kein lauter Selbstdarsteller, sondern jemand, der mitdenkt, zuverlässig arbeitet und Aufgaben sauber zu Ende bringt. Mir sind klare Abläufe, ehrliche Kommunikation und ein Umfeld wichtig, in dem man Schritt für Schritt Verantwortung übernehmen und sich weiterentwickeln kann.
-
-        <br><br>
-
-        <em>
-          Mein Ziel ist ein beruflicher Einstieg in einem Umfeld, in dem kaufmännische Organisation, technisches Verständnis und praktische Nähe zusammenkommen – besonders im Einkauf, in der Materialwirtschaft, Disposition oder in einer produktionsnahen Sachbearbeitung.
-        </em>
-
-      </p>
+      <nav>
+        <a href="#ueber-mich">Über mich</a>
+        <span>•</span>
+        <a href="#qualifikationen">Qualifikationen</a>
+        <span>•</span>
+        <a href="#erfahrung">Erfahrung</a>
+        <span>•</span>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
     </header>
 
-    <section>
-      <h2>Berufliches Profil</h2>
+    <main>
 
-      <div class="grid cols-2">
+      <section class="hero">
+        <h1>
+          Praxis im Kopf.<br>
+          Struktur im Blick.
+          <span class="script">Chaos bitte nur in Maßen.</span>
+        </h1>
 
-        <div class="card">
-          <h3>Einkauf & Materialwirtschaft</h3>
+        <p class="subline">
+          Industriekaufmann mit technischem Hintergrund – gerne dort, wo Abläufe,
+          Material, Menschen und Produktion sinnvoll zusammenkommen.
+          <strong>Also genau da, wo es spannend wird.</strong>
+        </p>
+      </section>
 
+      <section class="stone-stage" id="ueber-mich">
+        <div class="stone-slab">
+          <div class="stone-content">
+            <h2>Über mich</h2>
+
+            <p>
+              Eigentlich war mein beruflicher Weg mal ein ganz anderer. Ich komme ursprünglich aus der Produktion
+              und habe viele Jahre als Verfahrensmechaniker für Kunststoff- und Kautschuktechnik gearbeitet.
+              Dort lernt man ziemlich schnell, dass Abläufe auf dem Papier oft entspannter aussehen als in der Realität.
+            </p>
+
+            <p>
+              Vor allem dann, wenn Material fehlt, Maschinen stehen oder Projekte plötzlich unter Zeitdruck geraten.
+              Genau dieses praktische Verständnis hat meine Arbeitsweise bis heute geprägt.
+            </p>
+
+            <p>
+              Aus gesundheitlichen Gründen musste ich mich irgendwann beruflich neu orientieren.
+              Die Umschulung zum Industriekaufmann war für mich weniger ein kompletter Neuanfang,
+              sondern eher die Möglichkeit, meine praktische Erfahrung mit kaufmännischen Abläufen zu verbinden.
+            </p>
+
+            <p>
+              Besonders im Einkauf habe ich gemerkt, wie gut mir diese Mischung aus Organisation,
+              Abstimmung und Praxisbezug liegt. Bedarfe koordinieren, Liefertermine im Blick behalten,
+              mit Projektleitern sprechen und dafür sorgen, dass Dinge funktionieren – klingt trocken,
+              fühlt sich aber gut an, wenn am Ende alles passt.
+            </p>
+
+            <p>
+              Parallel dazu konnte ich auch Erfahrungen im Personalbereich sammeln:
+              Bewerberkommunikation, Onboarding und Terminorganisation.
+              Mir liegt der ruhige, direkte Umgang mit Menschen. Keine Show, kein Fachchinesisch –
+              einfach vernünftig miteinander.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="info-grid">
+
+        <div class="info-card" id="qualifikationen">
+          <div class="icon">▣</div>
+          <h3>Qualifikationen</h3>
           <ul>
-            <li>Umsetzung freigegebener Bedarfe in Bestellungen</li>
-            <li>Angebotseinholung und Lieferantenrecherche</li>
-            <li>Pflege von Artikel-, Lieferanten- und Bestelldaten</li>
-            <li>Abstimmung mit Projektleitern und technischen Ansprechpartnern</li>
-            <li>Nachverfolgung von Lieferterminen und offenen Bedarfen</li>
-            <li>Kurzfristige Materialorganisation für Projekte und Baustellen</li>
-            <li>Sonderbeschaffung: Schweißgas für ein Projekt in Schweden</li>
-            <li>Produktionsnahes Verständnis durch technische Ausbildung und Praxiserfahrung</li>
+            <li>Umschulung zum Industriekaufmann</li>
+            <li>Ausbildung zum Verfahrensmechaniker für Kunststoff- und Kautschuktechnik</li>
+            <li>praktische Erfahrung in Produktion, Einkauf und Personalorganisation</li>
+            <li>technisches Verständnis kombiniert mit kaufmännischem Blick</li>
+            <li>sicherer Umgang mit Word, Excel und kaufmännischen Abläufen</li>
           </ul>
         </div>
 
-        <div class="card">
-          <h3>Personal & Organisation</h3>
-
+        <div class="info-card" id="erfahrung">
+          <div class="icon">▤</div>
+          <h3>Erfahrung</h3>
           <ul>
-            <li>Bewerberkommunikation per E-Mail und Telefon</li>
-            <li>Sichtung von Bewerbungen und Vorbereitung von Unterlagen</li>
-            <li>Koordination von Vorstellungsgesprächen und Terminen</li>
-            <li>Onboarding neuer Mitarbeitender inklusive erster Arbeitstag</li>
-            <li>Abstimmung von IT-Ausstattung, Arbeitsplatz und Einarbeitung</li>
-            <li>Begleitung neuer Mitarbeitender durch relevante Abteilungen</li>
-            <li>Organisation von Eignungstests und Schulungsrecherchen</li>
-            <li>Ruhiger, strukturierter Umgang mit Bewerbenden, Mitarbeitenden und Azubis</li>
+            <li>Bedarfsmeldungen bearbeiten und Bestellungen auslösen</li>
+            <li>Angebote einholen und Materialien recherchieren</li>
+            <li>Liefertermine nachhalten und offene Punkte klären</li>
+            <li>Abstimmung mit Projektleitern, Technik und internen Ansprechpartnern</li>
+            <li>Bewerberkommunikation, Terminorganisation und Onboarding</li>
           </ul>
         </div>
 
-      </div>
-    </section>
+        <div class="info-card">
+          <div class="icon">◌</div>
+          <h3>Meine Arbeitsweise</h3>
+          <ul>
+            <li>ruhig bleiben, auch wenn es mal unübersichtlich wird</li>
+            <li>mitdenken statt nur abarbeiten</li>
+            <li>praktisch denken, nicht unnötig verkomplizieren</li>
+            <li>sauber abstimmen, bevor Dinge liegen bleiben</li>
+            <li>verlässlich arbeiten, ohne großes Theater</li>
+          </ul>
+        </div>
 
-    <section id="kontakt">
-      <h2>Kontakt</h2>
+        <div class="info-card">
+          <div class="icon">◇</div>
+          <h3>Was Unternehmen von mir haben</h3>
+          <ul>
+            <li>jemand, der Produktion und Büro nicht als zwei getrennte Planeten sieht</li>
+            <li>einen realistischen Blick für Abläufe, Material und Zeitdruck</li>
+            <li>strukturierte Unterstützung im Tagesgeschäft</li>
+            <li>ruhige Kommunikation mit Kollegen, Bewerbenden und Ansprechpartnern</li>
+            <li>keinen Schaumschläger, sondern jemanden, der Dinge vernünftig erledigen will</li>
+          </ul>
+        </div>
 
-      <form action="mailto:bastian.goldmann@gmail.com" method="post" enctype="text/plain">
-        <input type="text" name="name" placeholder="Dein Name" required>
+      </section>
 
-        <input type="email" name="email" placeholder="Deine E-Mail" required>
+      <section class="contact" id="kontakt">
+        <div>📍 Kassel / Fritzlar</div>
+        <div>✉️ <a href="mailto:bastian.goldmann@gmail.com">bastian.goldmann@gmail.com</a></div>
+        <div>© <span id="year"></span> Basti</div>
+      </section>
 
-        <textarea name="message" rows="6" placeholder="Deine Nachricht ..." required></textarea>
-
-        <button type="submit">Nachricht senden</button>
-      </form>
-    </section>
+    </main>
 
     <footer>
-      © <span id="year"></span> Basti · Kassel/Fritzlar
+      Praxisnah. Ruhig. Strukturiert.
     </footer>
 
   </div>
@@ -259,5 +531,6 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
