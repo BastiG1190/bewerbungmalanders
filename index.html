@@ -4,23 +4,29 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Basti – Industriekaufmann</title>
-  <meta name="description" content="Basti – Industriekaufmann mit Erfahrung im Einkauf und Personalwesen. Strukturiert, ehrlich, ruhig und organisiert." />
+  <meta name="description" content="Basti – Industriekaufmann mit Erfahrung im Einkauf, Materialwirtschaft und Personalwesen. Strukturiert, ruhig und praxisnah." />
   <meta property="og:title" content="Basti – Industriekaufmann" />
-  <meta property="og:description" content="Strukturiert, ehrlich, ruhig und organisiert – Erfahrung im Einkauf und Personalwesen." />
+  <meta property="og:description" content="Industriekaufmann mit technischem Hintergrund und Erfahrung im Einkauf, Materialfluss und Personalwesen." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="de_DE" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --bg:#dbefe1; 
-      --text:#006d6f; 
-      --card:#ffffff; 
-      --border:#c5e0d7; 
+      --bg:#dbefe1;
+      --text:#006d6f;
+      --card:#ffffff;
+      --border:#c5e0d7;
       --acc:#008080;
     }
-    * {box-sizing:border-box;}
+
+    * {
+      box-sizing:border-box;
+    }
+
     html,body {
       margin:0;
       padding:0;
@@ -28,42 +34,92 @@
       color:var(--text);
       font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;
     }
-    a {color:var(--acc);text-decoration:none;}
-    a:hover {text-decoration:underline;}
-    .wrap {max-width:1100px;margin:0 auto;padding:24px;}
-    h1,h2,h3 {color:var(--text);}
-    header {padding:48px 0;}
-    .hero {display:grid;gap:24px;}
+
+    a {
+      color:var(--acc);
+      text-decoration:none;
+    }
+
+    a:hover {
+      text-decoration:underline;
+    }
+
+    .wrap {
+      max-width:1100px;
+      margin:0 auto;
+      padding:24px;
+    }
+
+    h1,h2,h3 {
+      color:var(--text);
+    }
+
+    header {
+      padding:48px 0;
+    }
+
+    .hero {
+      display:grid;
+      gap:24px;
+    }
+
     .hero h1 {
       font-family:"Dancing Script",cursive;
       font-size:42px;
       text-align:center;
       margin-bottom:8px;
     }
-    .lead {font-size:16px;line-height:1.7;max-width:850px;margin:0 auto;}
-    .cta {display:flex;gap:12px;margin-top:18px;flex-wrap:wrap;}
-    .btn {
-      display:inline-flex;align-items:center;gap:8px;
-      background:var(--acc);color:#fff;font-weight:600;
-      border:0;border-radius:12px;padding:10px 14px;
+
+    .lead {
+      font-size:16px;
+      line-height:1.8;
+      max-width:850px;
+      margin:0 auto;
     }
-    .btn.secondary {
-      background:transparent;color:var(--text);
-      border:1px solid var(--border);
+
+    section {
+      margin:48px 0;
     }
-    section {margin:48px 0;}
-    h2 {font-size:22px;margin:0 0 16px;text-align:center;}
-    .grid {display:grid;gap:16px;}
-    @media (min-width:840px){.grid.cols-2{grid-template-columns:repeat(2,1fr);}}
+
+    h2 {
+      font-size:22px;
+      margin:0 0 16px;
+      text-align:center;
+    }
+
+    .grid {
+      display:grid;
+      gap:16px;
+    }
+
+    @media (min-width:840px) {
+      .grid.cols-2 {
+        grid-template-columns:repeat(2,1fr);
+      }
+    }
+
     .card {
       background:var(--card);
       border:1px solid var(--border);
       border-radius:16px;
       padding:20px;
     }
-    .card h3 {margin-top:0;font-size:18px;}
-    ul {margin:10px 0 0 18px;}
-    li {margin:6px 0;}
+
+    .card h3 {
+      margin-top:0;
+      font-size:18px;
+    }
+
+    ul {
+      margin:10px 0 0 18px;
+      padding:0;
+    }
+
+    li {
+      margin:8px 0;
+      line-height:1.5;
+    }
+
     footer {
       border-top:1px solid var(--border);
       margin-top:48px;
@@ -71,8 +127,16 @@
       font-size:14px;
       text-align:center;
     }
-    form {display:grid;gap:12px;max-width:500px;margin:0 auto;}
-    input,textarea {
+
+    form {
+      display:grid;
+      gap:12px;
+      max-width:500px;
+      margin:0 auto;
+    }
+
+    input,
+    textarea {
       background:#fff;
       border:1px solid var(--border);
       border-radius:10px;
@@ -80,6 +144,7 @@
       font-family:inherit;
       color:var(--text);
     }
+
     button[type="submit"] {
       background:var(--acc);
       color:#fff;
@@ -89,56 +154,98 @@
       font-weight:600;
       cursor:pointer;
     }
-    button[type="submit"]:hover {opacity:0.9;}
+
+    button[type="submit"]:hover {
+      opacity:0.9;
+    }
   </style>
 </head>
+
 <body>
   <div class="wrap">
+
     <header class="hero">
       <h1>Hey, ich bin Basti...</h1>
+
       <p class="lead">
-        <br><br> Ich bin jemand, der gelernt hat, dass das Leben selten geradeaus läuft – und dass genau das seinen Wert ausmacht. Manche Wege sucht man sich aus, andere suchen einen. Meiner hat irgendwann eine andere Richtung eingeschlagen als geplant. Ich habe mir das nicht ausgesucht, aber ich habe gelernt, damit umzugehen, das Beste daraus zu machen und daran zu wachsen.<br><br>
-        Ich komme ursprünglich aus dem technischen Bereich. Dort habe ich früh verstanden, wie wichtig saubere Abläufe, verlässliche Materialien und ein funktionierendes Zusammenspiel zwischen Planung und Umsetzung sind. Mir war immer wichtig, zu wissen, wofür ich arbeite – einen Bezug zum Produkt, zu Projekten und zu realen Prozessen zu haben. Als mich eine Erkrankung zu einem beruflichen Neustart gezwungen hat, war klar: Genau diesen Bezug möchte ich behalten und weiter ausbauen.<br><br>
-        Die Umschulung zum Industriekaufmann war für mich deshalb kein Bruch, sondern ein logischer nächster Schritt. Sie hat mir ermöglicht, technisches Verständnis mit kaufmännischer Organisation zu verbinden. Besonders im <strong>Einkauf</strong> habe ich gemerkt, wie gut mir produktionsnahe Aufgaben liegen: Bedarfe verstehen, Abläufe koordinieren, Verfügbarkeiten sichern und den Überblick behalten – immer nah an Projekten und an dem, was tatsächlich gebraucht wird. Diese Schnittstelle zwischen Praxis und Büro ist der Punkt, an dem ich mich fachlich zuhause fühle.<br><br>
-        Parallel dazu habe ich im <strong>Personalwesen</strong> wertvolle Erfahrungen gesammelt. Dort ging es weniger um Zahlen und mehr um Struktur, Kommunikation und Verlässlichkeit im Umgang mit Menschen. Für mich sind das keine Gegensätze, sondern Fähigkeiten, die sich sinnvoll ergänzen – auch im Einkauf, wo klare Absprachen und saubere Prozesse entscheidend sind.<br><br>
-        Abseits der Arbeit finde ich Ausgleich in Musik, im Training und auch beim Gaming. Das hilft mir, den Kopf freizubekommen und den Fokus zu behalten. Ich bin keiner, der sich ständig in den Vordergrund drängt – eher jemand, der ruhig arbeitet, mitdenkt, Verantwortung übernimmt und Dinge sauber zu Ende bringt.<br><br>
-      <em>Ich bin an einem Punkt, an dem ich weiß, was ich kann und was mir wichtig ist. Jetzt geht es darum, diese Erfahrung und diese Haltung in einem Umfeld einzubringen, in dem man gemeinsam etwas aufbaut – Schritt für Schritt, mit Struktur, Vertrauen und dem Blick nach vorn.</em>
-</p>
+
+        <br><br>
+
+        Ich bin Basti – Industriekaufmann mit technischer Vergangenheit und einem klaren Blick für praktische Abläufe. Mein beruflicher Weg war nicht geradlinig, aber genau dadurch habe ich gelernt, mich neu auszurichten, Verantwortung zu übernehmen und Dinge realistisch anzupacken.
+
+        <br><br>
+
+        Ursprünglich komme ich aus der Produktion. Als gelernter Verfahrensmechaniker weiß ich, was es bedeutet, wenn Material fehlt, Termine drücken oder Abläufe nicht sauber ineinandergreifen. Diese Erfahrung prägt bis heute meine Arbeitsweise: Ich denke nicht nur vom Schreibtisch aus, sondern habe immer auch den praktischen Bezug zum Produkt, zur Fertigung und zu den Menschen dahinter im Blick.
+
+        <br><br>
+
+        Während meiner Umschulung zum Industriekaufmann habe ich besonders im <strong>Einkauf</strong> gemerkt, wo meine Stärken liegen: freigegebene Bedarfe in Bestellungen umsetzen, Angebote einholen, Lieferanten- und Artikeldaten pflegen, Liefertermine nachhalten und eng mit Projektleitern sowie technischen Ansprechpartnern abstimmen. Mir liegt diese Schnittstelle zwischen Büro, Materialfluss und Produktion, weil dort Struktur, Verlässlichkeit und praktisches Verständnis zusammenkommen.
+
+        <br><br>
+
+        Ergänzend habe ich im <strong>Personalwesen</strong> praktische Einblicke gesammelt – vor allem in Bewerberkommunikation, Interviewkoordination und Onboarding. Besonders der Umgang mit neuen Mitarbeitenden und Auszubildenden liegt mir, weil ich gern Orientierung gebe, Abläufe erkläre und Menschen ruhig und auf Augenhöhe begleite.
+
+        <br><br>
+
+        Ich bin kein lauter Selbstdarsteller, sondern jemand, der mitdenkt, zuverlässig arbeitet und Aufgaben sauber zu Ende bringt. Mir sind klare Abläufe, ehrliche Kommunikation und ein Umfeld wichtig, in dem man Schritt für Schritt Verantwortung übernehmen und sich weiterentwickeln kann.
+
+        <br><br>
+
+        <em>
+          Mein Ziel ist ein beruflicher Einstieg in einem Umfeld, in dem kaufmännische Organisation, technisches Verständnis und praktische Nähe zusammenkommen – besonders im Einkauf, in der Materialwirtschaft, Disposition oder in einer produktionsnahen Sachbearbeitung.
+        </em>
+
+      </p>
     </header>
 
     <section>
       <h2>Berufliches Profil</h2>
+
       <div class="grid cols-2">
+
         <div class="card">
-          <h3>Einkauf</h3>
+          <h3>Einkauf & Materialwirtschaft</h3>
+
           <ul>
-            <li>Bedarfsmeldungen & Bestellungen</li>
-            <li>Materialrecherche für Projekte & Baustellen</li>
-            <li>enge Abstimmung mit Projektleitung</li>
-            <li>Eigenständige Umsetzung von Beschaffungsprozessen</li>
-            <li>Terminverfolgung & Priorisierung</li>
-            <li>internationale Sonderbeschaffung (Schweißgas Schweden))</li>
-            <li>Nachverfolgung, Abstimmung, Sicherstellung der Verfügbarkeit</li>
+            <li>Umsetzung freigegebener Bedarfe in Bestellungen</li>
+            <li>Angebotseinholung und Lieferantenrecherche</li>
+            <li>Pflege von Artikel-, Lieferanten- und Bestelldaten</li>
+            <li>Abstimmung mit Projektleitern und technischen Ansprechpartnern</li>
+            <li>Nachverfolgung von Lieferterminen und offenen Bedarfen</li>
+            <li>Kurzfristige Materialorganisation für Projekte und Baustellen</li>
+            <li>Sonderbeschaffung: Schweißgas für ein Projekt in Schweden</li>
+            <li>Produktionsnahes Verständnis durch technische Ausbildung und Praxiserfahrung</li>
           </ul>
         </div>
+
         <div class="card">
-          <h3>Personalwesen</h3>
+          <h3>Personal & Organisation</h3>
+
           <ul>
-            <li>Screening von Bewerbungen</li>
-            <li>Interviewkoordination</li>
-            <li>Bewerberkommunikation</li>
-            <li>Onboarding</li>
+            <li>Bewerberkommunikation per E-Mail und Telefon</li>
+            <li>Sichtung von Bewerbungen und Vorbereitung von Unterlagen</li>
+            <li>Koordination von Vorstellungsgesprächen und Terminen</li>
+            <li>Onboarding neuer Mitarbeitender inklusive erster Arbeitstag</li>
+            <li>Abstimmung von IT-Ausstattung, Arbeitsplatz und Einarbeitung</li>
+            <li>Begleitung neuer Mitarbeitender durch relevante Abteilungen</li>
+            <li>Organisation von Eignungstests und Schulungsrecherchen</li>
+            <li>Ruhiger, strukturierter Umgang mit Bewerbenden, Mitarbeitenden und Azubis</li>
           </ul>
         </div>
+
       </div>
     </section>
 
     <section id="kontakt">
       <h2>Kontakt</h2>
+
       <form action="mailto:bastian.goldmann@gmail.com" method="post" enctype="text/plain">
         <input type="text" name="name" placeholder="Dein Name" required>
+
         <input type="email" name="email" placeholder="Deine E-Mail" required>
+
         <textarea name="message" rows="6" placeholder="Deine Nachricht ..." required></textarea>
+
         <button type="submit">Nachricht senden</button>
       </form>
     </section>
@@ -146,7 +253,9 @@
     <footer>
       © <span id="year"></span> Basti · Kassel/Fritzlar
     </footer>
+
   </div>
+
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
