@@ -14,9 +14,11 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
+
     :root{
       --ink:#2f3934;
       --muted:#6d675f;
@@ -241,11 +243,6 @@
       font-size:15px;
     }
 
-    .stone-slab p:last-child,
-    .stone-note p:last-child{
-      margin-bottom:0;
-    }
-
     .stone-note{
       max-width:820px;
       margin:32px auto 0;
@@ -272,14 +269,6 @@
       background:
         radial-gradient(circle at 80% 20%, rgba(255,255,255,.18), transparent 22%),
         linear-gradient(180deg, rgba(255,255,255,.12), rgba(120,90,55,.06));
-    }
-
-    .info-card:nth-child(2){
-      transform:translateY(2px);
-    }
-
-    .info-card:nth-child(3){
-      transform:translateY(-1px);
     }
 
     .info-card:last-child{
@@ -328,14 +317,27 @@
       color:#383832;
     }
 
-    .contact a{
-      color:var(--ink);
+    .contact-button{
+      display:inline-block;
+      padding:12px 22px;
+      background:
+        linear-gradient(145deg, #d8c7a8, #bda585);
+      border:2px solid #8f785c;
+      border-radius:12px 16px 14px 10px;
+      color:#2f3934;
       text-decoration:none;
       font-weight:600;
+      box-shadow:
+        inset 0 0 10px rgba(255,255,255,.25),
+        0 6px 12px rgba(70,52,32,.18);
+      transition:.2s ease;
     }
 
-    .contact a:hover{
-      text-decoration:underline;
+    .contact-button:hover{
+      transform:translateY(-2px);
+      box-shadow:
+        inset 0 0 12px rgba(255,255,255,.3),
+        0 10px 18px rgba(70,52,32,.22);
     }
 
     footer{
@@ -361,6 +363,7 @@
     }
 
     @media(max-width:680px){
+
       .wrap{
         padding:22px 14px 32px;
       }
@@ -401,7 +404,6 @@
       .info-card{
         border-right:0;
         border-bottom:1px solid rgba(95,75,50,.35);
-        transform:none !important;
       }
 
       .info-card:last-child{
@@ -411,7 +413,9 @@
       .contact-content{
         grid-template-columns:1fr;
       }
+
     }
+
   </style>
 </head>
 
@@ -420,6 +424,7 @@
   <div class="wrap">
 
     <header>
+
       <div class="brand">
         <strong>BASTI</strong>
         <span>Industriekaufmann</span>
@@ -434,11 +439,13 @@
         <span>•</span>
         <a href="#kontakt">Kontakt</a>
       </nav>
+
     </header>
 
     <main>
 
       <section class="hero">
+
         <h1>
           Praxis im Kopf.<br>
           Struktur im Blick.
@@ -450,11 +457,15 @@
           Material, Menschen und Produktion sinnvoll zusammenkommen.
           <strong>Also genau da, wo es spannend wird.</strong>
         </p>
+
       </section>
 
       <section class="stone-stage" id="ueber-mich">
+
         <div class="stone-slab">
+
           <div class="stone-content">
+
             <h2>Über mich</h2>
 
             <p>
@@ -487,12 +498,17 @@
               Mir liegt der ruhige, direkte Umgang mit Menschen. Keine Show, kein Fachchinesisch –
               einfach vernünftig miteinander.
             </p>
+
           </div>
+
         </div>
+
       </section>
 
       <section class="stone-note" id="warum">
+
         <div class="note-content">
+
           <h2>Warum genau dieser Bereich?</h2>
 
           <p>
@@ -506,14 +522,19 @@
             sondern Abläufe wirklich unterstützt: Bedarfe klären, Informationen zusammenbringen,
             Termine im Blick behalten und dafür sorgen, dass die Dinge im Tagesgeschäft sauber weiterlaufen.
           </p>
+
         </div>
+
       </section>
 
       <section class="info-grid">
 
         <div class="info-card" id="qualifikationen">
+
           <div class="icon">▣</div>
+
           <h3>Qualifikationen</h3>
+
           <ul>
             <li>Umschulung zum Industriekaufmann</li>
             <li>Ausbildung zum Verfahrensmechaniker für Kunststoff- und Kautschuktechnik</li>
@@ -521,11 +542,15 @@
             <li>technisches Verständnis kombiniert mit kaufmännischem Blick</li>
             <li>sicherer Umgang mit Word, Excel und kaufmännischen Abläufen</li>
           </ul>
+
         </div>
 
         <div class="info-card">
+
           <div class="icon">▤</div>
+
           <h3>Erfahrung</h3>
+
           <ul>
             <li>Bedarfsmeldungen bearbeiten und Bestellungen auslösen</li>
             <li>Angebote einholen und Materialien recherchieren</li>
@@ -533,11 +558,15 @@
             <li>Abstimmung mit Projektleitern, Technik und internen Ansprechpartnern</li>
             <li>Bewerberkommunikation, Terminorganisation und Onboarding</li>
           </ul>
+
         </div>
 
         <div class="info-card">
+
           <div class="icon">◌</div>
+
           <h3>Meine Arbeitsweise</h3>
+
           <ul>
             <li>ruhig bleiben, auch wenn es mal unübersichtlich wird</li>
             <li>mitdenken statt nur abarbeiten</li>
@@ -545,11 +574,15 @@
             <li>sauber abstimmen, bevor Dinge liegen bleiben</li>
             <li>verlässlich arbeiten, ohne großes Theater</li>
           </ul>
+
         </div>
 
         <div class="info-card">
+
           <div class="icon">◇</div>
+
           <h3>Was Unternehmen von mir haben</h3>
+
           <ul>
             <li>jemand, der Produktion und Büro nicht als zwei getrennte Planeten sieht</li>
             <li>einen realistischen Blick für Abläufe, Material und Zeitdruck</li>
@@ -557,16 +590,27 @@
             <li>ruhige Kommunikation mit Kollegen, Bewerbenden und Ansprechpartnern</li>
             <li>keinen Schaumschläger, sondern jemanden, der Dinge vernünftig erledigen will</li>
           </ul>
+
         </div>
 
       </section>
 
       <section class="contact" id="kontakt">
+
         <div class="contact-content">
+
           <div>📍 Kassel / Fritzlar</div>
-          <div>✉️ <a href="mailto:fury_006@gmx.de">fury_006@gmx.de</a></div>
+
+          <div>
+            <a class="contact-button" href="mailto:fury_006@gmx.de">
+              Kontakt aufnehmen
+            </a>
+          </div>
+
           <div>© <span id="year"></span> Basti</div>
+
         </div>
+
       </section>
 
     </main>
